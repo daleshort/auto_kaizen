@@ -8,7 +8,7 @@ class sql_mgr ():
     def __init__(self, tool_file, manufacturer_file,
                  drawer_file, drawer_to_tools_file, profile_file):
 
-        # yes i'm storing a password here
+        # yes i'm storing a password here as an example. Use env in the future.
         self.connection = create_server_connection('localhost',
                                                    'root', 'kittens')
 
@@ -20,7 +20,7 @@ class sql_mgr ():
         create_database(self.connection, """
         CREATE DATABASE pytools
         """)
-
+        # yes i'm storing a password here as an example. Use env in the future.
         self.connection = create_server_connection('localhost', 'root', 'kittens', 'pytools')
 
         tool_query = """
